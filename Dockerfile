@@ -20,5 +20,6 @@ RUN  apt-get update \
 # Install Puppeteer under /node_modules so it's available system-wide
 ADD . /script
 RUN cd /script \
-    && npm install \
-    && npm run start
+    && npm install
+#     && npm run start
+CMD cd /script && npm install && npm run start
